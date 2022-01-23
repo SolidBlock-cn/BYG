@@ -18,6 +18,7 @@
     "access.HoeItemAccess",
     "access.IronBarsBlockAccess",
     "access.ItemBlockRenderTypeAccess",
+    "access.LeavesBlockAccess",
     "access.MenuTypeAccess",
     "access.NyliumBlockAccess",
     "access.OverworldBiomeBuilderAccess",

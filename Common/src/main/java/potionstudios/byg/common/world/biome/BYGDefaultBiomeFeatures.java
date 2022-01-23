@@ -616,7 +616,7 @@ public class BYGDefaultBiomeFeatures {
     }
 
     public static void addJacarandaTrees(BiomeGenerationSettings.Builder gen) {
-        gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BYGPlacedFeatures.JACARANDA_TREES);
+//        gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BYGPlacedFeatures.JACARANDA_TREES);
     }
 
     public static void addSparseJacarandaTrees(BiomeGenerationSettings.Builder gen) {

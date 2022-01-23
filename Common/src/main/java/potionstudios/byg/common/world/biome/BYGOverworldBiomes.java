@@ -8,6 +8,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import potionstudios.byg.common.world.feature.BYGPlacedFeatures;
 import potionstudios.byg.mixin.access.VanillaBiomeAccess;
 
 import static potionstudios.byg.mixin.access.OverworldBiomesAccess.invokeGlobalOverworldGeneration;
@@ -935,6 +936,8 @@ public class BYGOverworldBiomes {
         BYGDefaultBiomeFeatures.addLeafPile(generationSettings);
         BYGDefaultBiomeFeatures.addBYGTropicFlowers(generationSettings);
         BYGDefaultBiomeFeatures.addBYGMushrooms(generationSettings);
+
+        generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BYGPlacedFeatures.STRUCTURE_TREES);
 
         spawnSettings.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 12, 4, 4));
         spawnSettings.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PIG, 10, 4, 4));

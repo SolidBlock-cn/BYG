@@ -5,9 +5,11 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import potionstudios.byg.BYG;
+import potionstudios.byg.common.block.BYGBlocks;
 import potionstudios.byg.mixin.access.VegetationPlacementsAccess;
 
 import java.util.ArrayList;
@@ -73,6 +75,7 @@ public class BYGPlacedFeatures {
     public static final PlacedFeature JACARANDA_BUSHES = createPlacedFeature("jacaranda_bushes", BYGConfiguredFeatures.JACARANDA_BUSHES.placed(treePlacement(PlacementUtils.countExtra(1, 0.2F, 1))));
     public static final PlacedFeature MANGROVE_TREES = createPlacedFeature("mangrove_trees", BYGConfiguredFeatures.MANGROVE_TREES.placed(treePlacementBaseOceanFloor(PlacementUtils.countExtra(6, 0.25F, 2))));
     public static final PlacedFeature MAPLE_TREES = createPlacedFeature("maple_trees", BYGConfiguredFeatures.MAPLE_TREES.placed(treePlacement(PlacementUtils.countExtra(4, 0.25F, 2))));
+    public static final PlacedFeature STRUCTURE_TREES = createPlacedFeature("structure_trees", BYGConfiguredFeatures.STRUCTURE_TREE_TEST.placed(treePlacement(PlacementUtils.countExtra(4, 0.25F, 2), BYGBlocks.JACARANDA_SAPLING)));
     public static final PlacedFeature HOLLY_TREES = createPlacedFeature("holly_trees", BYGConfiguredFeatures.HOLLY_TREES.placed(treePlacement(PlacementUtils.countExtra(4, 0.25F, 4))));
     public static final PlacedFeature PRAIRIE_SHRUBS = createPlacedFeature("prairie_shrubs", BYGConfiguredFeatures.DECIDUOUS_TREES.placed(treePlacement(PlacementUtils.countExtra(0, 0.25F, 2))));
     public static final PlacedFeature RAINFOREST_TREES = createPlacedFeature("rainforest_trees", BYGConfiguredFeatures.RAINFOREST_TREES.placed(treePlacement(PlacementUtils.countExtra(15, 0.25F, 1))));

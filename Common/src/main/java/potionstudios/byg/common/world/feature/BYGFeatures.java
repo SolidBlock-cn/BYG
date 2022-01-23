@@ -149,6 +149,8 @@ import potionstudios.byg.common.world.feature.overworld.trees.zelkova.ZelkovaTre
 import potionstudios.byg.common.world.feature.overworld.trees.zelkova.ZelkovaTree2;
 import potionstudios.byg.common.world.feature.overworld.trees.zelkova.ZelkovaTree3;
 import potionstudios.byg.common.world.feature.overworld.volcano.VolcanoFeature;
+import potionstudios.byg.common.world.tree.BYGStructureTreeConfig;
+import potionstudios.byg.common.world.tree.TreeStructureFeature;
 import potionstudios.byg.util.RegistryObject;
 
 import java.util.ArrayList;
@@ -159,6 +161,9 @@ import java.util.function.Consumer;
 public class BYGFeatures {
 
     public static List<RegistryObject<Feature<?>>> FEATURES = new ArrayList<>();
+
+    public static final Feature<BYGStructureTreeConfig> STRUCTURE_TREE = createFeature("structure_tree", new TreeStructureFeature(BYGStructureTreeConfig.CODEC.stable()));
+
 
     public static final Feature<NoneFeatureConfiguration> DUMMY_TREE = createFeature("dummy_tree", new SmallPineTree(NoneFeatureConfiguration.CODEC.stable()));
     public static final Feature<NoneFeatureConfiguration> BEEHIVE = createFeature("beehive", new BeeHiveFeature(NoneFeatureConfiguration.CODEC.stable()));

@@ -55,7 +55,6 @@ public class BYGBiomes {
     public static ResourceKey<Biome> GUIANA_SHIELD = createBiome("guiana_shield", guianaShield());
     public static ResourceKey<Biome> JACARANDA_FOREST = createBiome("jacaranda_forest", jacarandaForest());
     public static ResourceKey<Biome> MAPLE_TAIGA = createBiome("maple_taiga", mapleTaiga());
-//    public static ResourceKey<Biome> MARSHLANDS = createBiome("marshlands", marshlands());
 //    public static ResourceKey<Biome> COCONINO_MEADOW = createBiome("coconino_meadow", coconinoMeadow(false, false));
 //    public static ResourceKey<Biome> MOJAVE_DESERT = createBiome("mojave_desert", mojaveDesert());
 //    public static ResourceKey<Biome> LUSH_TUNDRA = createBiome("lush_tundra", lushTundra());
