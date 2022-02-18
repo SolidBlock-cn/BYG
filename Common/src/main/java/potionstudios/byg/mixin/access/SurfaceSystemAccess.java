@@ -22,4 +22,7 @@ public interface SurfaceSystemAccess {
     static void invokeMakeBands(RandomSource randomSource, BlockState[] states, int offset, BlockState state) {
         throw new Error("Mixin did not apply!");
     }
+
+    @Invoker
+    int invokeGetSurfaceDepth(int x, int z);
 }

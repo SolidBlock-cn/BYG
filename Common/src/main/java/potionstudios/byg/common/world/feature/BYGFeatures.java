@@ -164,7 +164,6 @@ public class BYGFeatures {
     public static final Feature<NoneFeatureConfiguration> HUH = createFeature("river_feature", new RiverThingy(NoneFeatureConfiguration.CODEC.stable()));
     public static final Feature<SimpleBlockProviderConfig> VOLCANO = createFeature("volcano", new VolcanoFeature(SimpleBlockProviderConfig.CODEC.stable()));
     public static final Feature<SimpleBlockProviderConfig> ARCH = createFeature("arch", new ArchFeature(SimpleBlockProviderConfig.CODEC.stable()));
-    public static final Feature<NoneFeatureConfiguration> DUNE_TERRAIN = createFeature("dune_terrain", new DuneFeature(NoneFeatureConfiguration.CODEC.stable()));
 
     public static final Feature<SimpleBlockProviderConfig> PURPUR_PEAK = createFeature("purpur_peak", new PurpurPeak(SimpleBlockProviderConfig.CODEC.stable()));
     public static final Feature<SimpleBlockProviderConfig> SPIKE = createFeature("spike", new SpikeFeature(SimpleBlockProviderConfig.CODEC.stable()));

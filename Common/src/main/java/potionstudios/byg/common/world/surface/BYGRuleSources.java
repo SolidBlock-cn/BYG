@@ -1,4 +1,4 @@
-package potionstudios.byg.common.world.surfacerules;
+package potionstudios.byg.common.world.surface;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -59,7 +59,7 @@ public class BYGRuleSources {
         public SurfaceRules.SurfaceRule apply(SurfaceRules.Context context) {
             SurfaceSystem surfaceSystem = ((SurfaceRuleContextAccess) (Object) context).getSystem();
             ChunkAccess chunkAccess = ((SurfaceRuleContextAccess) (Object) context).getChunk();
-            Random random = ((ChunkRandom) chunkAccess).getRandom(((SeedGetter) surfaceSystem).getLong());
+            Random random = ((ChunkRandom) chunkAccess).getRandom(((SeedGetter) surfaceSystem).getAsLong());
             SurfaceRules.SurfaceRule[][] rules = new SurfaceRules.SurfaceRule[16][16];
 
             for (int x = 0; x < rules.length; x++) {

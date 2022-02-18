@@ -2,10 +2,15 @@ package potionstudios.byg.util;
 
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.chunk.ChunkAccess;
+import net.minecraft.world.level.levelgen.Heightmap;
+import potionstudios.byg.common.block.BYGBlocks;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiPredicate;
+import java.util.function.Function;
 
 public class BYGUtil {
 
@@ -82,5 +88,13 @@ public class BYGUtil {
             }
         }
         return false;
+    }
+
+    public static void fill(int top, int bottom, int x, int z, Function<BlockPos, BlockState> stateFunction) {
+        BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos().set(x, top, z);
+        for (int y = mutableBlockPos.getY(); y >= bottom; y--) {
+            stateFunction.apply(mutableBlockPos);
+            mutableBlockPos.move(Direction.DOWN);
+        }
     }
 }

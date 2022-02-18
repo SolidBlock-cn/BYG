@@ -10,6 +10,6 @@ public class BYGCarvableBlocks {
 
     @SuppressWarnings("deprecation")
     public static Set<Block> addCarverBlocks() {
-        return ImmutableSet.of(BYGBlocks.OVERGROWN_DACITE, BYGBlocks.PODZOL_DACITE, BYGBlocks.SOAPSTONE, BYGBlocks.ROCKY_STONE, BYGBlocks.MOSSY_STONE, BYGBlocks.OVERGROWN_STONE, BYGBlocks.SCORIA_STONE, BYGBlocks.LUSH_DIRT, BYGBlocks.PEAT);
+        return ImmutableSet.of(BYGBlocks.OVERGROWN_DACITE, BYGBlocks.WINDSWEPT_SAND, BYGBlocks.WINDSWEPT_SANDSTONE, BYGBlocks.PODZOL_DACITE, BYGBlocks.SOAPSTONE, BYGBlocks.ROCKY_STONE, BYGBlocks.MOSSY_STONE, BYGBlocks.OVERGROWN_STONE, BYGBlocks.SCORIA_STONE, BYGBlocks.LUSH_DIRT, BYGBlocks.PEAT);
     }
 }

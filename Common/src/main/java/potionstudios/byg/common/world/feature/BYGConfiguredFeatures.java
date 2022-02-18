@@ -44,8 +44,6 @@ public class BYGConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> ALLIUM_TALL_BUSH = createConfiguredFeature("tall_allium_bush", Feature.RANDOM_PATCH.configured(FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(BYGBlocks.TALL_ALLIUM))), List.of(), 15)));
     public static final ConfiguredFeature<?, ?> ALLIUM_TALL_PINK_BUSH = createConfiguredFeature("tall_pink_allium_bush", Feature.RANDOM_PATCH.configured(FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(BYGBlocks.TALL_PINK_ALLIUM))), List.of(), 15)));
 
-    public static final ConfiguredFeature<?, ?> DUNE_TERRAIN = createConfiguredFeature("dune_terrain", BYGFeatures.DUNE_TERRAIN.configured(FeatureConfiguration.NONE));
-
     public static final ConfiguredFeature<?, ?> AMARANTH = createFlowerConfiguredFeature("amaranth", BYGBlocks.AMARANTH);
     public static final ConfiguredFeature<?, ?> AMARANTH_MAGENTA = createFlowerConfiguredFeature("magenta_amaranth", BYGBlocks.MAGENTA_AMARANTH);
     public static final ConfiguredFeature<?, ?> AMARANTH_ORANGE = createFlowerConfiguredFeature("orange_amaranth", BYGBlocks.ORANGE_AMARANTH);

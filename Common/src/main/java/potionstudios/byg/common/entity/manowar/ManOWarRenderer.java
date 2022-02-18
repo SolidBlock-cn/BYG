@@ -34,7 +34,7 @@ package potionstudios.byg.common.entity.manowar;
 //     */
 //    @Override
 //    public ResourceLocation getTextureLocation(T entity) {
-//        return TEXTURES.get(entity.getColor());
+//        return TEXTURES.getGenerator(entity.getColor());
 //    }
 //
 //    protected void applyRotations(T squid, PoseStack poseStack, float f, float g, float h) {

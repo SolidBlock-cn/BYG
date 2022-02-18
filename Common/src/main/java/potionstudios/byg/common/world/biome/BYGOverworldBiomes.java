@@ -700,7 +700,7 @@ public class BYGOverworldBiomes {
         BiomeDefaultFeatures.addFossilDecoration(generationSettings);
         invokeGlobalOverworldGeneration(generationSettings);
 
-        generationSettings.addFeature(GenerationStep.Decoration.RAW_GENERATION, BYGPlacedFeatures.DUNE_TERRAIN);
+//        generationSettings.addFeature(GenerationStep.Decoration.RAW_GENERATION, BYGPlacedFeatures.DUNE_TERRAIN);
         BiomeDefaultFeatures.addDefaultOres(generationSettings);
         BiomeDefaultFeatures.addDefaultSoftDisks(generationSettings);
         BiomeDefaultFeatures.addDefaultFlowers(generationSettings);

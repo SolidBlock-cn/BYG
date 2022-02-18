@@ -1,4 +1,4 @@
-package potionstudios.byg.common.world.surfacerules;
+package potionstudios.byg.common.world.surface;
 
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.world.level.block.Blocks;

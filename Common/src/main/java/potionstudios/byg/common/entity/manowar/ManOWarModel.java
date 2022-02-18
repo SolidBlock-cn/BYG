@@ -15,7 +15,7 @@ package potionstudios.byg.common.entity.manowar;
 //		@Override
 //		public ResourceLocation getTextureLocation(T object) {
 //			ManOWar manOWar = (ManOWar) object;
-//			return ManOWarRenderer.TEXTURES.get(manOWar.getColor());
+//			return ManOWarRenderer.TEXTURES.getGenerator(manOWar.getColor());
 //		}
 //		@Override
 //		public ResourceLocation getAnimationFileLocation(T animatable) {

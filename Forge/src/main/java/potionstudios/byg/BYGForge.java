@@ -35,7 +35,7 @@ import potionstudios.byg.common.sound.BYGSounds;
 import potionstudios.byg.common.world.biome.BYGBiomes;
 import potionstudios.byg.common.world.biome.BYGEndBiomeSource;
 import potionstudios.byg.common.world.feature.BYGFeatures;
-import potionstudios.byg.common.world.surfacerules.BYGSurfaceRules;
+import potionstudios.byg.common.world.surface.BYGSurfaceRules;
 import potionstudios.byg.config.json.BiomeDictionaryConfig;
 import potionstudios.byg.config.json.OverworldBiomeConfig;
 import potionstudios.byg.util.ModLoaderContext;

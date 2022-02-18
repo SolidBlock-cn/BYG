@@ -1,5 +1,6 @@
 package potionstudios.byg.util;
 
-public interface SeedGetter {
-    long getLong();
+import java.util.function.LongSupplier;
+
+public interface SeedGetter extends LongSupplier {
 }

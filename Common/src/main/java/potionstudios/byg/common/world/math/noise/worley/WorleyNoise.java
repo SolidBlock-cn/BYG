@@ -69,7 +69,7 @@ public class WorleyNoise extends Noise {
         // hack, but easier than handling points that are exactly at negative
         // integer latice-points correctly.
         Point p = new Point(origin.x + 1e-7, origin.z + 1e-7);
-        // get the coordinate that this point resides at
+        // getGenerator the coordinate that this point resides at
         int x = floor(p.x);
 //		int y = floor(p.y);
         int z = floor(p.z);
@@ -139,7 +139,7 @@ public class WorleyNoise extends Noise {
             }
 //			}
         }
-        // provide minimum. be sure to square root it to get the
+        // provide minimum. be sure to square root it to getGenerator the
         // true distance.
 
         return fastSqrt(s);

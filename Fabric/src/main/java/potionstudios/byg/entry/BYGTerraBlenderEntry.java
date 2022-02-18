@@ -3,7 +3,7 @@ package potionstudios.byg.entry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import potionstudios.byg.BYG;
-import potionstudios.byg.common.world.surfacerules.BYGSurfaceRules;
+import potionstudios.byg.common.world.surface.BYGSurfaceRules;
 import potionstudios.byg.config.json.OverworldBiomeConfig;
 import potionstudios.byg.util.ModLoaderContext;
 import potionstudios.byg.world.biome.BYGBiomeProvider;

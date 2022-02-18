@@ -112,7 +112,7 @@ public class XorShift {
          * @return the next double value.
          */
         public double nextDouble() {
-            // get out of signed range, then divide in the remaining space
+            // getGenerator out of signed range, then divide in the remaining space
             // of the shifted long value.  i hope this works...
             return (nextLong() >>> 2) * (1.0 / (1L << 62));
         }

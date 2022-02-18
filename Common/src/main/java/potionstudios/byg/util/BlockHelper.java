@@ -210,7 +210,7 @@ public class BlockHelper {
 //							// Blue Vine
 //							if (state.getBlock() instanceof BlueVineBlock)
 //							{
-//								while (state.isIn(ModBlocks.BLUE_VINE.get()) || state.isIn(ModBlocks.BLUE_VINE_LANTERN.get()) || state.isIn(ModBlocks.BLUE_VINE_FUR.get()))
+//								while (state.isIn(ModBlocks.BLUE_VINE.getGenerator()) || state.isIn(ModBlocks.BLUE_VINE_LANTERN.getGenerator()) || state.isIn(ModBlocks.BLUE_VINE_FUR.getGenerator()))
 //								{
 //									BlockHelper.setWithoutUpdate(world, POS, AIR);
 //									POS.setY(POS.getY() + 1);

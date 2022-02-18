@@ -5,6 +5,7 @@ import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.levelgen.SurfaceSystem;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import potionstudios.byg.common.*;
@@ -55,6 +56,7 @@ public class BYG {
         CONFIG_PATH = path;
         MOD_LOADER_TAG_TARGET = modloaderTagTarget;
         MLBlockTags.bootStrap();
+        Class<SurfaceSystem> surfaceSystemClass = SurfaceSystem.class;
     }
 
     public static void commonLoad() {
