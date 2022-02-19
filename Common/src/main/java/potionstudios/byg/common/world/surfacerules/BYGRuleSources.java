@@ -2,6 +2,7 @@ package potionstudios.byg.common.world.surfacerules;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.random.SimpleWeightedRandomList;
@@ -11,6 +12,7 @@ import net.minecraft.world.level.levelgen.RandomSource;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.SurfaceSystem;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
+import potionstudios.byg.util.ChunkNoiseCaveData;
 import potionstudios.byg.mixin.access.SurfaceRuleContextAccess;
 import potionstudios.byg.mixin.access.SurfaceSystemAccess;
 import potionstudios.byg.util.ChunkRandom;
@@ -194,11 +196,33 @@ public class BYGRuleSources {
             return "ShatteredGlacierIceBands[" +
                     "bandStates=" + bandStates + ']';
         }
+    }
 
+    public record WriteCavePositions() implements SurfaceRules.RuleSource {
+        public static final Codec<WriteCavePositions> CODEC = Codec.unit(WriteCavePositions::new);
+
+
+        @Override
+        public Codec<? extends SurfaceRules.RuleSource> codec() {
+            return CODEC;
+        }
+
+        @Override
+        public SurfaceRules.SurfaceRule apply(SurfaceRules.Context context) {
+            ChunkAccess chunk = ((SurfaceRuleContextAccess)(Object) context).getChunk();
+
+            boolean inCave = !SurfaceRules.abovePreliminarySurface().apply(context).test() && SurfaceRules.hole().apply(context).test();
+
+            return (x, y, z) -> {
+                ((ChunkNoiseCaveData) chunk).setCaveHeight(x, z, y);
+                return chunk.getBlockState(new BlockPos(x, y, z));
+            };
+        }
     }
 
     static {
         Registry.register(Registry.RULE, createLocation("state_provider"), WeightedRuleSource.CODEC);
         Registry.register(Registry.RULE, createLocation("bands"), BandsRuleSource.CODEC);
+        Registry.register(Registry.RULE, createLocation("cave_position_writer"), WriteCavePositions.CODEC);
     }
 }

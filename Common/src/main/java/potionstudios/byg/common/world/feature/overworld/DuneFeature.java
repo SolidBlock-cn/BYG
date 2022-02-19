@@ -16,6 +16,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConf
 import potionstudios.byg.common.block.BYGBlocks;
 import potionstudios.byg.common.world.biome.BYGBiomes;
 import potionstudios.byg.common.world.math.noise.fastnoise.FastNoise;
+import potionstudios.byg.util.ChunkNoiseCaveData;
 
 public class DuneFeature extends Feature<NoneFeatureConfiguration> {
     protected static FastNoise fastNoise;
@@ -75,10 +76,11 @@ public class DuneFeature extends Feature<NoneFeatureConfiguration> {
         for (int x = -blendRange; x <= blendRange; x++) {
             for (int z = -blendRange; z <= blendRange; z++) {
                 blendingPos.set(mutableBlockPos).move(x, 0, z);
+                int caveHeight = ((ChunkNoiseCaveData) level.getChunk(blendingPos)).getCaveHeight(blendingPos.getX(), blendingPos.getZ());
                 int height1 = level.getHeight(Heightmap.Types.WORLD_SURFACE_WG, blendingPos.getX(), blendingPos.getZ());
                 blendingPos.setY(height1);
                 ResourceKey<Biome> biomeResourceKey = level.getBiomeName(blendingPos).get();
-                if (biomeResourceKey != BYGBiomes.WINDSWEPT_DUNES && height1 < height) {
+                if (biomeResourceKey != BYGBiomes.WINDSWEPT_DUNES && height1 < height || height < caveHeight) {
                     density += 1.0 / (blendRange * blendRange) * 2;
                 }
             }

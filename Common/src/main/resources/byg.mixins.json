@@ -57,6 +57,7 @@
     "common.entity.MixinSlimeEntity",
     "common.lightengine.WorldLightManagerMixin",
     "common.world.MixinChunkAccess",
+    "common.world.MixinLevelChunk",
     "common.world.MixinOreFeatures",
     "common.world.MixinServerLevel",
     "common.world.carver.MixinWorldCarver",
